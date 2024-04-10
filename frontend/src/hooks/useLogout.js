@@ -14,7 +14,7 @@ const useLogout = () => {
 
       const response = await axios.post(url)
       const responseData = response.data
-      console.log(responseData)
+
       if (responseData.error) {
         throw new Error(responseData.error)
       }

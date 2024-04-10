@@ -13,7 +13,7 @@ const useGetConversation = () => {
         const url = '/api/users'
         const response = await axios.get(url)
         const responseData = response.data
-        console.log(responseData)
+    
         if (responseData.error) {
           throw new Error(responseData.error)
         }

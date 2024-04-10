@@ -15,12 +15,10 @@ const useLogin = () => {
     try {
       const url = '/api/auth/login'
       const data = { username, password }
-      console.log(data)
 
       const response = await axios.post(url, data)
 
       const responseData = response.data
-      console.log(responseData)
 
       if (responseData.error) {
         throw new Error(responseData.error)
@@ -30,7 +28,6 @@ const useLogin = () => {
       setAuthUser(responseData)
     } catch (error) {
       toast.error(error.message)
-      console.log(error.message)
     } finally {
       setLoading(false)
     }
